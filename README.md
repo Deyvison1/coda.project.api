@@ -12,7 +12,7 @@
 
 ## Criado o repositorio com interface que extends de JpaRepository
 
-## Criado o service, implementado os metodos do CRUD e injetado a dependecia do repositorio
+## Criado o service, injetado a dependecia do repositorio e criado o CRUD
 
 ## Criado o controller, injetado a dependencia do service e mapeado suas rotas
 
