@@ -1,6 +1,6 @@
 
 
-## Projeto inciado ao criar a aplicacao spring com suas devidas dependencias ( Jpa, MysqlDriver, SpringWeb, SpringDevTools )
+## Projeto inciado ao criar a aplicacao spring com suas devidas dependencias ( Jpa, MySqlDriver, SpringWeb, SpringDevTools )
 
 ## Criado conexão com o banco de dados MySql 
 
