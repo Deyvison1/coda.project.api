@@ -27,13 +27,13 @@ public class Endereco
 	@Column(name = "numero")
 	private int numero;
 	
-	@Column(name = "uf")
+	@Column(name = "uf", nullable = false)
 	private EnumUF uf;
 	
 	@Column(name = "municipio")
 	private String municipio;
 	
-	@Column(name = "cep")
+	@Column(name = "cep", length = 7, nullable = false, unique = true)
 	private int cep;
 	// TRUE => PREFERENCIAL,  FALSE => NÃO PREFERENCIAL
 	@Column(name = "preferencial")
