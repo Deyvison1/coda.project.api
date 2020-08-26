@@ -14,7 +14,7 @@
 
 ## Criado o service, implementado os metodos do CRUD e injetado a dependecia do repositorio
 
-## Criado o controller e mapeado suas rotas
+## Criado o controller, injetado a dependencia do service e mapeado suas rotas
 
 ## Refatoracao do codigo e em alguns campos colocado algumas validacoes
 
