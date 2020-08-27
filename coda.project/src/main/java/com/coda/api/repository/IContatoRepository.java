@@ -11,11 +11,12 @@ import com.coda.api.models.Contato;
 public interface IContatoRepository extends JpaRepository<Contato, Long> 
 {
 	// LISTAR PELO NOME COMPLETO
-	List<Contato> findByNomeCompleto(String nomeCompleto);
+	//List<Contato> findByNomeCompleto(String nomeCompleto);
 	
+	List<Contato> findByNomeCompletoContaining(String search);
 	// LISTAR PELO NUMERO DE TELEFONE
-	Contato findByTelefonesNumero(int telefone);
+	//Contato findByTelefonesNumero(int telefone);
 	
 	// LISTAR PELO ENDERECO DE EMAIL
-	Contato findByEmailsEmail(String email);	
+	//Contato findByEmailsEmail(String email);	
 }

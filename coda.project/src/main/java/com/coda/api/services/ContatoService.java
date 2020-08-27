@@ -1,13 +1,15 @@
 package com.coda.api.services;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.coda.api.models.Contato;
+import com.coda.api.models.Endereco;
 import com.coda.api.repository.IContatoRepository;
+import com.coda.api.repository.IEnderecoRepository;
 
 @Service
 public class ContatoService 
@@ -15,6 +17,8 @@ public class ContatoService
 	@Autowired
 	private IContatoRepository contatoRepository;
 
+	@Autowired
+	private IEnderecoRepository enderecoRepository;
 	// LISTAR TODOS
 	public List<Contato> getAll()
 	{
@@ -27,22 +31,9 @@ public class ContatoService
 		return contatoRepository.findById(id).get();
 	}
 
-	// LISTAR POR EMAIL
-	public Contato getByEmailsEmail(String email)
-	{
-		return contatoRepository.findByEmailsEmail(email);
-	}
-
-	// LISTAR POR TELEFONE
-	public Contato getByTelefoneNumero(int numero)
-	{
-		return contatoRepository.findByTelefonesNumero(numero);
-	}
-
-	// LISTAR POR NOME
-	public List<Contato> getByNome(String nome)
-	{
-		return contatoRepository.findByNomeCompleto(nome);
+	// LISTAR POR NOME COMPLETO OU TELEFONE
+	public List<Contato> getByNomeCompletoOrTelefone(String search){
+		return contatoRepository.findByNomeCompletoContaining(search);
 	}
 
 	// SALVAR NO BANCO
@@ -57,12 +48,5 @@ public class ContatoService
 		contatoRepository.delete(contato);
 	}
 
-	// ATUALIZAR
-	public Contato update(Contato contato) throws Exception
-	{
-		Contato contatoUpdate = contatoRepository.getOne(contato.getId());
-		contatoUpdate = contato;
-		save(contatoUpdate);
-		return contatoUpdate;
-	}
+	
 }

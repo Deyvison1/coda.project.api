@@ -40,18 +40,6 @@ public class ContatoController
 		return ResponseEntity.noContent().build();
 	}
 
-	// ATUALIZAR
-	@PutMapping
-	public ResponseEntity<Contato> update(@RequestBody Contato contatoUpdate) throws Exception
-	{
-		Contato contato = contatoService.getById(contatoUpdate.getId());
-
-		if(contato == null) 
-		{
-			return ResponseEntity.notFound().build();
-		}
-		return ResponseEntity.ok(contato);
-	}
 
 	// ADICIONAR NOVO CONTATO
 	@PostMapping
@@ -73,26 +61,13 @@ public class ContatoController
 		return ResponseEntity.ok(contato);
 	}
 
-	// LISTAR POR EMAIL
-	@GetMapping("email/{email}")
-	public ResponseEntity<Contato> getByEmail(@PathVariable String email)
+	// LISTAR POR NOME COMPLETO OU TELEFONE
+	@GetMapping("search/{search}")
+	public ResponseEntity<List<Contato>> getByEmail(@PathVariable String search)
 	{
-		return ResponseEntity.ok(contatoService.getByEmailsEmail(email));
+		return ResponseEntity.ok(contatoService.getByNomeCompletoOrTelefone(search));
 	}
 
-	// LISTAR POR TELEFONE
-	@GetMapping("telefone/{numero}")
-	public ResponseEntity<Contato> getByTelefone(@PathVariable int numero)
-	{
-		return ResponseEntity.ok(contatoService.getByTelefoneNumero(numero));
-	}
-
-	// LISTAR TODOS CONTATOS
-	@GetMapping("nomeCompleto/{nomeCompleto}")
-	public ResponseEntity<List<Contato>> getByNomeCompleto(@PathVariable String nomeCompleto) 
-	{
-		return ResponseEntity.ok(contatoService.getByNome(nomeCompleto));
-	}
 
 	// LISTAR TODOS
 	@GetMapping

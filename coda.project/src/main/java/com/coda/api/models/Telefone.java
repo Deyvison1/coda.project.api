@@ -22,7 +22,7 @@ public class Telefone
 	private EnumUF uf;
 	
 	@Column(name = "numero", unique = true)
-	private int numero;
+	private String numero;
 	
 	@Column(name = "preferencial")
 	private boolean preferencial = false;

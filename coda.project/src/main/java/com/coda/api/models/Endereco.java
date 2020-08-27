@@ -24,6 +24,9 @@ public class Endereco
 	@Column(name = "bairro")
 	private String bairro;
 	
+	@Column(name = "localidade")
+	private String localidade;
+	
 	@Column(name = "numero")
 	private int numero;
 	
@@ -33,8 +36,8 @@ public class Endereco
 	@Column(name = "municipio")
 	private String municipio;
 	
-	@Column(name = "cep", length = 7, nullable = false, unique = true)
-	private int cep;
+	@Column(name = "cep")
+	private String cep;
 	// TRUE => PREFERENCIAL,  FALSE => NÃO PREFERENCIAL
 	@Column(name = "preferencial")
 	private boolean preferencial = false;
