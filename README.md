@@ -1,6 +1,6 @@
 
 
-## Projeto inciado ao criar a aplicacao spring com suas devidas dependencias ( Jpa, MySqlDriver, SpringWeb, SpringDevTools )
+## Projeto inciado ao criar a aplicacao spring com suas devidas dependencias ( Jpa, H2DataBase, SpringWeb, SpringDevTools )
 
 ## com git de comando git clone https://github.com/Deyvison1/coda.project.api.git
 
