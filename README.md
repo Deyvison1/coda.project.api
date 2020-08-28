@@ -2,21 +2,14 @@
 
 ## Projeto inciado ao criar a aplicacao spring com suas devidas dependencias ( Jpa, MySqlDriver, SpringWeb, SpringDevTools )
 
-## Criado conexão com o banco de dados MySql 
+## com git de comando git clone https://github.com/Deyvison1/coda.project.api.git
 
-## Criado diagrama de classes com suas propriedades e relacionamentos
+## entrar na pasta do projeto e digitar mvn package
 
-## Criado os pacotes ( controllers, models, repository, services )
+## digite o comando no terminal mvn package -DskipTestes -T(n de preocessadores/threads)
 
-## Criado os models, mapeando suas propriedades e gerando as tabelas
+## digite nomeProjeto mvn spring-boot:run
 
-## Criado o repositorio com interface que extends de JpaRepository
 
-## Criado o service, injetado a dependecia do repositorio e criado o CRUD
 
-## Criado o controller, injetado a dependencia do service e mapeado suas rotas
-
-## Refatoracao do codigo e em alguns campos colocado algumas validacoes
-
-## Terminio do back-end do projeto
-
+ 
